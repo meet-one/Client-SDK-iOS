@@ -15,4 +15,7 @@
 @property (nonatomic, copy) NSString *dappDescription;
 @property (nonatomic, copy) NSString *version;
 
+//simplewallet property
+@property (nonatomic, copy) NSString *uuID;
+
 @end

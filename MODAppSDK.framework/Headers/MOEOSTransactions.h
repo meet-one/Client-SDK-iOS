@@ -11,7 +11,6 @@
 @interface MOEOSTransactions : NSObject
 
 @property (nonatomic, copy) NSString *from;
-@property (nonatomic, copy) NSString *to;
 @property (nonatomic, strong) NSArray *actions;
 @property (nonatomic, copy) NSDictionary *options;
 @property (nonatomic, copy) NSString *transactionsInfo;

@@ -25,17 +25,20 @@
     dapp.icon = @"https://static.ethte.com/more/images/bigicon.png";
     dapp.version = @"1.1.0";
     dapp.dappDescription = @"MORE.ONE is the first airdrop “candy” distribution application focused on EOS.";
+    dapp.uuID = @"6e76f5ef-86da-441f-9be8-f7bebef72f9f";
     
-    //Register your dapp
+    //Register MEET.ONE SDK for your dapp
     [MODAppSDK registerWithDApp:dapp dappScheme:@"MeetOneSDKDemo" redirectURLString:@"https://more.one"];
+    //Register SimpleWallet SDK for your dapp
+    [MOSimpleWalletSDK registerSDKWithDApp:dapp redirectURLString:@"https://more.one"];
     
     return YES;
 }
 
 - (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey, id> *)options {
     
-    //Handle Callback
-    BOOL meetoneCallback = [MODAppSDK handleCallbackWithResult:url standbyCallback:^(MOCallbackResp *resp, MODapp *meetone) {
+    //Handle MEET.ONE Callback
+    BOOL meetoneCallback = [MODAppSDK handleCallbackWithResult:url completionBlock:^(MOCallbackResp *resp, MODapp *meetone) {
         NSInteger code = resp.code;
         NSString *message = resp.message;
         MOFunctionType type = resp.type;
@@ -56,10 +59,40 @@
             case MOFunctionTypePushTransactions:
                 [[NSNotificationCenter defaultCenter] postNotificationName:@"MOFunctionTypePushTransactions" object:resp];
                 break;
+            case MOFunctionTypeSignature:
+                [[NSNotificationCenter defaultCenter] postNotificationName:@"MOFunctionTypeSignature" object:resp];
+                break;
             default:
                 break;
         }
     }];
+    
+    if (!meetoneCallback) {
+        //Handle SimpleWallet Callback
+        BOOL simpleWalletCallback = [MOSimpleWalletSDK handleCallbackWithResult:url completionBlock:^(MOSimpleWalletCallbackResult result, id res, NSString *callbackURI) {
+            NSLog(@"callbackURI:%@, res:%@", callbackURI, res);  //print message
+            switch (result) {
+                case MOSimpleWalletCallbackResultError:
+                    ;
+                    break;
+                case MOSimpleWalletCallbackResultSuccess:
+                    break;
+                case MOSimpleWalletCallbackResultFailed:
+                    ;
+                    break;
+                case MOSimpleWalletCallbackResultCancel:
+                    ;
+                    break;
+                default:
+                    break;
+            }
+            if ([callbackURI containsString:@"MeetOneSDKDemo://more.one?action=login"]) {
+                [[NSNotificationCenter defaultCenter] postNotificationName:@"MOSimpleWalletAuthorize" object:@(result)];
+            } else if ([callbackURI containsString:@"MeetOneSDKDemo://more.one?action=transfer"]) {
+                [[NSNotificationCenter defaultCenter] postNotificationName:@"MOSimpleWalletTransfer" object:@(result)];
+            }
+        }];
+    }
     
     NSLog(@"success:%d", meetoneCallback);
     

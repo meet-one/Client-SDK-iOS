@@ -17,6 +17,8 @@
 		3C724F18213576A900E41B7E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C724F17213576A900E41B7E /* main.m */; };
 		3C724F22213576A900E41B7E /* MeetOneSDKTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C724F21213576A900E41B7E /* MeetOneSDKTests.m */; };
 		3C724F2D213576A900E41B7E /* MeetOneSDKUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C724F2C213576A900E41B7E /* MeetOneSDKUITests.m */; };
+		3CE5C8772142C6E500662E44 /* MeetOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CE5C8752142C6E400662E44 /* MeetOneViewController.m */; };
+		3CE5C8782142C6E500662E44 /* SimpleWalletViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CE5C8762142C6E400662E44 /* SimpleWalletViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,19 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		3C5037862136AC6E00AF2E11 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		3C724F02213576A800E41B7E /* MeetOneSDK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeetOneSDK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C724F05213576A800E41B7E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -54,6 +69,10 @@
 		3C724F28213576A900E41B7E /* MeetOneSDKUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeetOneSDKUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C724F2C213576A900E41B7E /* MeetOneSDKUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeetOneSDKUITests.m; sourceTree = "<group>"; };
 		3C724F2E213576A900E41B7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3CE5C8732142C6E400662E44 /* MeetOneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeetOneViewController.h; sourceTree = "<group>"; };
+		3CE5C8742142C6E400662E44 /* SimpleWalletViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleWalletViewController.h; sourceTree = "<group>"; };
+		3CE5C8752142C6E400662E44 /* MeetOneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeetOneViewController.m; sourceTree = "<group>"; };
+		3CE5C8762142C6E400662E44 /* SimpleWalletViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleWalletViewController.m; sourceTree = "<group>"; };
 		5A100E9157BEF336E621090F /* Pods_MeetOneSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MeetOneSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C69D6037CB0CB417353C1D8E /* Pods-MeetOneSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeetOneSDK.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MeetOneSDK/Pods-MeetOneSDK.debug.xcconfig"; sourceTree = "<group>"; };
 		E6F3F4F082A9C961AE96F028 /* Pods-MeetOneSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeetOneSDK.release.xcconfig"; path = "Pods/Target Support Files/Pods-MeetOneSDK/Pods-MeetOneSDK.release.xcconfig"; sourceTree = "<group>"; };
@@ -118,6 +137,10 @@
 		3C724F04213576A800E41B7E /* MeetOneSDK */ = {
 			isa = PBXGroup;
 			children = (
+				3CE5C8732142C6E400662E44 /* MeetOneViewController.h */,
+				3CE5C8752142C6E400662E44 /* MeetOneViewController.m */,
+				3CE5C8742142C6E400662E44 /* SimpleWalletViewController.h */,
+				3CE5C8762142C6E400662E44 /* SimpleWalletViewController.m */,
 				3C724F05213576A800E41B7E /* AppDelegate.h */,
 				3C724F06213576A800E41B7E /* AppDelegate.m */,
 				3C724F08213576A800E41B7E /* ViewController.h */,
@@ -171,6 +194,7 @@
 				3C724EFF213576A800E41B7E /* Frameworks */,
 				3C724F00213576A800E41B7E /* Resources */,
 				1C7A842BD0EFC6746799153F /* [CP] Embed Pods Frameworks */,
+				3C5037862136AC6E00AF2E11 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -336,6 +360,8 @@
 			files = (
 				3C724F10213576A800E41B7E /* MeetOneSDK.xcdatamodeld in Sources */,
 				3C724F0A213576A800E41B7E /* ViewController.m in Sources */,
+				3CE5C8782142C6E500662E44 /* SimpleWalletViewController.m in Sources */,
+				3CE5C8772142C6E500662E44 /* MeetOneViewController.m in Sources */,
 				3C724F18213576A900E41B7E /* main.m in Sources */,
 				3C724F07213576A800E41B7E /* AppDelegate.m in Sources */,
 			);
@@ -508,12 +534,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5S8593D9HR;
+				ENABLE_BITCODE = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MeetOneSDK",
+				);
 				INFOPLIST_FILE = MeetOneSDK/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = one.meet.MeetOneSDK;
+				PRODUCT_BUNDLE_IDENTIFIER = one.meet.heh;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -525,12 +557,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5S8593D9HR;
+				ENABLE_BITCODE = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MeetOneSDK",
+				);
 				INFOPLIST_FILE = MeetOneSDK/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = one.meet.MeetOneSDK;
+				PRODUCT_BUNDLE_IDENTIFIER = one.meet.heh;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

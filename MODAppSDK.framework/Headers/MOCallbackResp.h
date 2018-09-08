@@ -13,6 +13,7 @@ typedef NS_ENUM(NSInteger, MOFunctionType){
     MOFunctionTypeAuthorize,
     MOFunctionTypeTransfer,
     MOFunctionTypePushTransactions,
+    MOFunctionTypeSignature,
 };
 
 @interface MOCallbackResp : NSObject
