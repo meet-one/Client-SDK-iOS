@@ -235,9 +235,9 @@ transactions.transactionsInfo = @"EOS TO THE MOON !!!";
 ```objc
 //Request EOS Custom Signature
 [MODAppSDK requestEOSCustomSignature:@"johntrump123"
-                             description:@"EOS TO THE MOON !!!"
-                              customData:@"for test"
-                       completionHandler:^(BOOL success) {
+                         description:@"EOS TO THE MOON !!!"
+                          customData:@"for test"
+                   completionHandler:^(BOOL success) {
         ;
 }];
 ```
@@ -338,7 +338,7 @@ transactions.transactionsInfo = @"EOS TO THE MOON !!!";
 ```objc
 [MOSimpleWalletSDK requestEOSAuthorization:@"SimpleWallet" serverLoginURL:@"https://demo/api/login.php" callbackURI:@"MeetOneSDKDemo://more.one?action=login" completionHandler:^(BOOL success) {
         ;
-    }];
+}];
 ```
 
 **res Data**
@@ -377,7 +377,7 @@ transfer.orderInfo = @"EOS TO THE MOON !!!";
 //Send
 [MOSimpleWalletSDK sendEOSTransferation:transfer callbackURI:@"MeetOneSDKDemo://more.one?action=transfer" completionHandler:^(BOOL success) {
         ;
-    }];
+}];
 ```
 
 **res Data**  
