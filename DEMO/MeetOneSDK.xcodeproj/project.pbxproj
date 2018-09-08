@@ -1,0 +1,664 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		13AB2012D025F16EF839F6C0 /* Pods_MeetOneSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A100E9157BEF336E621090F /* Pods_MeetOneSDK.framework */; };
+		3C724F07213576A800E41B7E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C724F06213576A800E41B7E /* AppDelegate.m */; };
+		3C724F0A213576A800E41B7E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C724F09213576A800E41B7E /* ViewController.m */; };
+		3C724F0D213576A800E41B7E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C724F0B213576A800E41B7E /* Main.storyboard */; };
+		3C724F10213576A800E41B7E /* MeetOneSDK.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3C724F0E213576A800E41B7E /* MeetOneSDK.xcdatamodeld */; };
+		3C724F12213576A900E41B7E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C724F11213576A900E41B7E /* Assets.xcassets */; };
+		3C724F15213576A900E41B7E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C724F13213576A900E41B7E /* LaunchScreen.storyboard */; };
+		3C724F18213576A900E41B7E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C724F17213576A900E41B7E /* main.m */; };
+		3C724F22213576A900E41B7E /* MeetOneSDKTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C724F21213576A900E41B7E /* MeetOneSDKTests.m */; };
+		3C724F2D213576A900E41B7E /* MeetOneSDKUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C724F2C213576A900E41B7E /* MeetOneSDKUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3C724F1E213576A900E41B7E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3C724EFA213576A800E41B7E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3C724F01213576A800E41B7E;
+			remoteInfo = MeetOneSDK;
+		};
+		3C724F29213576A900E41B7E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3C724EFA213576A800E41B7E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3C724F01213576A800E41B7E;
+			remoteInfo = MeetOneSDK;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3C724F02213576A800E41B7E /* MeetOneSDK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeetOneSDK.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C724F05213576A800E41B7E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3C724F06213576A800E41B7E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3C724F08213576A800E41B7E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		3C724F09213576A800E41B7E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		3C724F0C213576A800E41B7E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3C724F0F213576A800E41B7E /* MeetOneSDK.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MeetOneSDK.xcdatamodel; sourceTree = "<group>"; };
+		3C724F11213576A900E41B7E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3C724F14213576A900E41B7E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3C724F16213576A900E41B7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3C724F17213576A900E41B7E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3C724F1D213576A900E41B7E /* MeetOneSDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeetOneSDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C724F21213576A900E41B7E /* MeetOneSDKTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeetOneSDKTests.m; sourceTree = "<group>"; };
+		3C724F23213576A900E41B7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3C724F28213576A900E41B7E /* MeetOneSDKUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeetOneSDKUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C724F2C213576A900E41B7E /* MeetOneSDKUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeetOneSDKUITests.m; sourceTree = "<group>"; };
+		3C724F2E213576A900E41B7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A100E9157BEF336E621090F /* Pods_MeetOneSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MeetOneSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C69D6037CB0CB417353C1D8E /* Pods-MeetOneSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeetOneSDK.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MeetOneSDK/Pods-MeetOneSDK.debug.xcconfig"; sourceTree = "<group>"; };
+		E6F3F4F082A9C961AE96F028 /* Pods-MeetOneSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeetOneSDK.release.xcconfig"; path = "Pods/Target Support Files/Pods-MeetOneSDK/Pods-MeetOneSDK.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3C724EFF213576A800E41B7E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13AB2012D025F16EF839F6C0 /* Pods_MeetOneSDK.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3C724F1A213576A900E41B7E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3C724F25213576A900E41B7E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		08C14FDCC07BBB30E2535D42 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5A100E9157BEF336E621090F /* Pods_MeetOneSDK.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3C724EF9213576A800E41B7E = {
+			isa = PBXGroup;
+			children = (
+				3C724F04213576A800E41B7E /* MeetOneSDK */,
+				3C724F20213576A900E41B7E /* MeetOneSDKTests */,
+				3C724F2B213576A900E41B7E /* MeetOneSDKUITests */,
+				3C724F03213576A800E41B7E /* Products */,
+				7D282B5E1F3BC1728A63B0D8 /* Pods */,
+				08C14FDCC07BBB30E2535D42 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3C724F03213576A800E41B7E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3C724F02213576A800E41B7E /* MeetOneSDK.app */,
+				3C724F1D213576A900E41B7E /* MeetOneSDKTests.xctest */,
+				3C724F28213576A900E41B7E /* MeetOneSDKUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3C724F04213576A800E41B7E /* MeetOneSDK */ = {
+			isa = PBXGroup;
+			children = (
+				3C724F05213576A800E41B7E /* AppDelegate.h */,
+				3C724F06213576A800E41B7E /* AppDelegate.m */,
+				3C724F08213576A800E41B7E /* ViewController.h */,
+				3C724F09213576A800E41B7E /* ViewController.m */,
+				3C724F0B213576A800E41B7E /* Main.storyboard */,
+				3C724F11213576A900E41B7E /* Assets.xcassets */,
+				3C724F13213576A900E41B7E /* LaunchScreen.storyboard */,
+				3C724F16213576A900E41B7E /* Info.plist */,
+				3C724F17213576A900E41B7E /* main.m */,
+				3C724F0E213576A800E41B7E /* MeetOneSDK.xcdatamodeld */,
+			);
+			path = MeetOneSDK;
+			sourceTree = "<group>";
+		};
+		3C724F20213576A900E41B7E /* MeetOneSDKTests */ = {
+			isa = PBXGroup;
+			children = (
+				3C724F21213576A900E41B7E /* MeetOneSDKTests.m */,
+				3C724F23213576A900E41B7E /* Info.plist */,
+			);
+			path = MeetOneSDKTests;
+			sourceTree = "<group>";
+		};
+		3C724F2B213576A900E41B7E /* MeetOneSDKUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3C724F2C213576A900E41B7E /* MeetOneSDKUITests.m */,
+				3C724F2E213576A900E41B7E /* Info.plist */,
+			);
+			path = MeetOneSDKUITests;
+			sourceTree = "<group>";
+		};
+		7D282B5E1F3BC1728A63B0D8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C69D6037CB0CB417353C1D8E /* Pods-MeetOneSDK.debug.xcconfig */,
+				E6F3F4F082A9C961AE96F028 /* Pods-MeetOneSDK.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3C724F01213576A800E41B7E /* MeetOneSDK */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3C724F31213576A900E41B7E /* Build configuration list for PBXNativeTarget "MeetOneSDK" */;
+			buildPhases = (
+				BB492A1BD96957BE310BF20F /* [CP] Check Pods Manifest.lock */,
+				3C724EFE213576A800E41B7E /* Sources */,
+				3C724EFF213576A800E41B7E /* Frameworks */,
+				3C724F00213576A800E41B7E /* Resources */,
+				1C7A842BD0EFC6746799153F /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MeetOneSDK;
+			productName = MeetOneSDK;
+			productReference = 3C724F02213576A800E41B7E /* MeetOneSDK.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3C724F1C213576A900E41B7E /* MeetOneSDKTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3C724F34213576A900E41B7E /* Build configuration list for PBXNativeTarget "MeetOneSDKTests" */;
+			buildPhases = (
+				3C724F19213576A900E41B7E /* Sources */,
+				3C724F1A213576A900E41B7E /* Frameworks */,
+				3C724F1B213576A900E41B7E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3C724F1F213576A900E41B7E /* PBXTargetDependency */,
+			);
+			name = MeetOneSDKTests;
+			productName = MeetOneSDKTests;
+			productReference = 3C724F1D213576A900E41B7E /* MeetOneSDKTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3C724F27213576A900E41B7E /* MeetOneSDKUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3C724F37213576A900E41B7E /* Build configuration list for PBXNativeTarget "MeetOneSDKUITests" */;
+			buildPhases = (
+				3C724F24213576A900E41B7E /* Sources */,
+				3C724F25213576A900E41B7E /* Frameworks */,
+				3C724F26213576A900E41B7E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3C724F2A213576A900E41B7E /* PBXTargetDependency */,
+			);
+			name = MeetOneSDKUITests;
+			productName = MeetOneSDKUITests;
+			productReference = 3C724F28213576A900E41B7E /* MeetOneSDKUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3C724EFA213576A800E41B7E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = MEET.ONE;
+				TargetAttributes = {
+					3C724F01213576A800E41B7E = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					3C724F1C213576A900E41B7E = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 3C724F01213576A800E41B7E;
+					};
+					3C724F27213576A900E41B7E = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 3C724F01213576A800E41B7E;
+					};
+				};
+			};
+			buildConfigurationList = 3C724EFD213576A800E41B7E /* Build configuration list for PBXProject "MeetOneSDK" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3C724EF9213576A800E41B7E;
+			productRefGroup = 3C724F03213576A800E41B7E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3C724F01213576A800E41B7E /* MeetOneSDK */,
+				3C724F1C213576A900E41B7E /* MeetOneSDKTests */,
+				3C724F27213576A900E41B7E /* MeetOneSDKUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3C724F00213576A800E41B7E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C724F15213576A900E41B7E /* LaunchScreen.storyboard in Resources */,
+				3C724F12213576A900E41B7E /* Assets.xcassets in Resources */,
+				3C724F0D213576A800E41B7E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3C724F1B213576A900E41B7E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3C724F26213576A900E41B7E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1C7A842BD0EFC6746799153F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MeetOneSDK/Pods-MeetOneSDK-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CocoaSecurity/CocoaSecurity.framework",
+				"${PODS_ROOT}/MODAppSDK/MODAppSDK.framework",
+				"${BUILT_PRODUCTS_DIR}/YYModel/YYModel.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaSecurity.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MODAppSDK.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYModel.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MeetOneSDK/Pods-MeetOneSDK-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BB492A1BD96957BE310BF20F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MeetOneSDK-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3C724EFE213576A800E41B7E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C724F10213576A800E41B7E /* MeetOneSDK.xcdatamodeld in Sources */,
+				3C724F0A213576A800E41B7E /* ViewController.m in Sources */,
+				3C724F18213576A900E41B7E /* main.m in Sources */,
+				3C724F07213576A800E41B7E /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3C724F19213576A900E41B7E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C724F22213576A900E41B7E /* MeetOneSDKTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3C724F24213576A900E41B7E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C724F2D213576A900E41B7E /* MeetOneSDKUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3C724F1F213576A900E41B7E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3C724F01213576A800E41B7E /* MeetOneSDK */;
+			targetProxy = 3C724F1E213576A900E41B7E /* PBXContainerItemProxy */;
+		};
+		3C724F2A213576A900E41B7E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3C724F01213576A800E41B7E /* MeetOneSDK */;
+			targetProxy = 3C724F29213576A900E41B7E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3C724F0B213576A800E41B7E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3C724F0C213576A800E41B7E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3C724F13213576A900E41B7E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3C724F14213576A900E41B7E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3C724F2F213576A900E41B7E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		3C724F30213576A900E41B7E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3C724F32213576A900E41B7E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C69D6037CB0CB417353C1D8E /* Pods-MeetOneSDK.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MeetOneSDK/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = one.meet.MeetOneSDK;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3C724F33213576A900E41B7E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E6F3F4F082A9C961AE96F028 /* Pods-MeetOneSDK.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MeetOneSDK/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = one.meet.MeetOneSDK;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3C724F35213576A900E41B7E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MeetOneSDKTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = one.meet.MeetOneSDKTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MeetOneSDK.app/MeetOneSDK";
+			};
+			name = Debug;
+		};
+		3C724F36213576A900E41B7E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MeetOneSDKTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = one.meet.MeetOneSDKTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MeetOneSDK.app/MeetOneSDK";
+			};
+			name = Release;
+		};
+		3C724F38213576A900E41B7E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MeetOneSDKUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = one.meet.MeetOneSDKUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MeetOneSDK;
+			};
+			name = Debug;
+		};
+		3C724F39213576A900E41B7E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MeetOneSDKUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = one.meet.MeetOneSDKUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MeetOneSDK;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3C724EFD213576A800E41B7E /* Build configuration list for PBXProject "MeetOneSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C724F2F213576A900E41B7E /* Debug */,
+				3C724F30213576A900E41B7E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3C724F31213576A900E41B7E /* Build configuration list for PBXNativeTarget "MeetOneSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C724F32213576A900E41B7E /* Debug */,
+				3C724F33213576A900E41B7E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3C724F34213576A900E41B7E /* Build configuration list for PBXNativeTarget "MeetOneSDKTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C724F35213576A900E41B7E /* Debug */,
+				3C724F36213576A900E41B7E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3C724F37213576A900E41B7E /* Build configuration list for PBXNativeTarget "MeetOneSDKUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C724F38213576A900E41B7E /* Debug */,
+				3C724F39213576A900E41B7E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		3C724F0E213576A800E41B7E /* MeetOneSDK.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3C724F0F213576A800E41B7E /* MeetOneSDK.xcdatamodel */,
+			);
+			currentVersion = 3C724F0F213576A800E41B7E /* MeetOneSDK.xcdatamodel */;
+			path = MeetOneSDK.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 3C724EFA213576A800E41B7E /* Project object */;
+}
