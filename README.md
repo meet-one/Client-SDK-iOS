@@ -1,14 +1,22 @@
 Client-SDK-iOS     
 ==============
-iOS client SDK for DApps.Will release in MEET.ONE 1.2.0
+iOS client SDK for DApps.Support MEET.ONE SDK & SimpleWallet SDK.     
 
-# Features
+## MEET.ONE SDK
+
+### Features
 - **Get EOS Account**: DApp can request EOS Authorization for an EOS Account.
 - **EOS Transfer**: DApp can send EOS Transferation.
 - **Push EOS Transactions**: DApp can push EOS Transactions.
+- **Request EOS Custom Signature**: DApp can request EOS Custom Signature.
 
-Installation
-==============
+## SimpleWallet SDK
+
+### Features
+- **Get EOS Account**: DApp can request EOS Authorization for an EOS Account.
+- **EOS Transfer**: DApp can send EOS Transferation.
+
+## Installation
 
 ### CocoaPods
 
@@ -16,9 +24,9 @@ Installation
 2. Run `pod install` or `pod update`.
 3. Import \<MODAppSDK/MODAppSDK.h\>.
 
-# Usage
+## MEET.ONE SDK Usage
 
-## Step.1 - Register Your DApp
+### Step.1 - Register Your DApp
 
 
 ```objc
@@ -34,7 +42,7 @@ Installation
     dapp.version = @"1.1.0";
     dapp.dappDescription = @"MORE.ONE is the first airdrop “candy” distribution application focused on EOS.";
     
-    //Register your dapp
+    //Register MEET.ONE SDK for your dapp
     [MODAppSDK registerWithDApp:dapp dappScheme:@"MeetOneSDKDemo" redirectURLString:@"https://more.one"];
     
     // other code
@@ -43,7 +51,7 @@ Installation
 }
 ```
 
-## Step.2 - Handle the Callback
+### Step.2 - Handle the Callback
 
 #### Callback Data(CallbackResp Data)
 ```objc
@@ -64,7 +72,7 @@ Installation
 
     // other code
     
-    //Handle Callback
+    //Handle MEET.ONE Callback
     BOOL meetoneCallback = [MODAppSDK handleCallbackWithResult:url standbyCallback:^(MOCallbackResp *resp, MODapp *meetone) {
         NSInteger code = resp.code;
         NSString *message = resp.message;
@@ -96,8 +104,8 @@ Installation
 ```
 
 
-## Step.3 - Choose the function
-### 1.Request EOS Authorization
+### Step.3 - Choose the function
+#### 1.Request EOS Authorization
 
 **API**
 
@@ -127,7 +135,7 @@ Installation
     * `isOwner`: `BOOL` account perssion(Owner,Active)
     * `currencyBalance`: `float` account eos balance
 
-### 2.EOS Transfer
+#### 2.EOS Transfer
 
 **API**
 
@@ -166,7 +174,7 @@ transfer.orderInfo = @"EOS TO THE MOON !!!";
     * `transaction_id`:`NSString`  transaction_id
 
 
-### 3.Push EOS Transactions
+#### 3.Push EOS Transactions
 
 **API**
 
@@ -187,7 +195,6 @@ transfer.orderInfo = @"EOS TO THE MOON !!!";
 //Create Transactions
 MOEOSTransactions *transactions = [MOEOSTransactions new];
 transactions.from = @"johntrump123";
-transactions.to = @"wujunchuan12";
 transactions.actions = @[@{@"account":@"eosio.token",@"name":@"transfer",@"authorization":@[@{@"actor":@"johntrump123",@"permission":@"owner"}],@"data":@{@"from":@"johntrump123",@"to":@"wujunchuan12",@"quantity":@"0.0001 EOS",@"memo":@"sdk test"}}];
 transactions.options = @{@"broadcast":@(YES)};
 transactions.transactionsInfo = @"EOS TO THE MOON !!!";
@@ -202,3 +209,176 @@ transactions.transactionsInfo = @"EOS TO THE MOON !!!";
 * `NSDictionary` Returned data in chain
     * `transaction_id`:`NSString`  transaction_id
 
+
+#### 4.Request EOS Custom Signature
+
+**API**
+
+```objc
+/**
+ *  Request EOS Custom Signature
+ *
+ *  @param accountName request account name
+ *  @param description Reason of Requesting
+ *  @param customData custom signature data
+ *  @param completion completion block
+ */
++ (void)requestEOSCustomSignature:(NSString *)accountName
+                      description:(NSString *)description
+                       customData:(NSString *)customData
+                completionHandler:(void (^ __nullable)(BOOL success))completion;
+```
+
+**Code Samples**
+
+```objc
+//Request EOS Custom Signature
+[MODAppSDK requestEOSCustomSignature:@"johntrump123"
+                         description:@"EOS TO THE MOON !!!"
+                          customData:@"for test"
+                   completionHandler:^(BOOL success) {
+        ;
+}];
+```
+
+**CallbackResp Data**  
+* `NSDictionary` Signature data in chain
+    * `account`: `NSString` account name
+    * `isOwner`: `BOOL` account perssion(Owner,Active)
+    * `signature`:`NSString`  signature
+
+    
+## SimpleWallet SDK Usage
+
+### Step.1 - Register Your DApp
+
+
+```objc
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    // Override point for customization after application launch.
+    
+    // other code
+    
+    //Create your dapp information
+    MODapp *dapp = [MODapp new];
+    dapp.name = @"MORE.ONE";
+    dapp.icon = @"https://static.ethte.com/more/images/bigicon.png";
+    dapp.version = @"1.1.0";
+    dapp.dappDescription = @"MORE.ONE is the first airdrop “candy” distribution application focused on EOS.";
+    dapp.uuID = @"6e76f5ef-86da-441f-9be8-f7bebef72f9f";
+    
+    //Register SimpleWallet SDK for your dapp
+    [MOSimpleWalletSDK registerSDKWithDApp:dapp redirectURLString:@"https://more.one"];
+    
+    // other code
+    
+    return YES;
+}
+```
+
+### Step.2 - Handle the Callback
+
+#### Get Callback
+
+```objc
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey, id> *)options {
+
+    // other code
+    
+    //Handle SimpleWallet Callback
+        BOOL simpleWalletCallback =         [MOSimpleWalletSDK handleCallbackWithResult:url completionBlock:^(MOSimpleWalletCallbackResult result, id res, NSString *callbackURI) {
+            NSLog(@"callbackURI:%@, res:%@", callbackURI, res);  //print message
+            switch (result) {
+                case MOSimpleWalletCallbackResultError:
+                    ;
+                    break;
+                case MOSimpleWalletCallbackResultSuccess:
+                    break;
+                case MOSimpleWalletCallbackResultFailed:
+                    ;
+                    break;
+                case MOSimpleWalletCallbackResultCancel:
+                    ;
+                    break;
+                default:
+                    break;
+            }
+        }];
+    
+    // other code
+    
+    return YES;
+}
+```
+
+
+### Step.3 - Choose the function
+#### 1.Request EOS Authorization
+
+**API**
+
+```objc
+/**
+ *  Request EOS Authorization
+ *
+ *  @param description Reason of Requesting
+ *  @param serverLoginURL dapp's server login API URL
+ *  @param callbackURI dapp's callback URI
+ *  @param completion completion block
+ */
++ (void)requestEOSAuthorization:(NSString *)description
+                 serverLoginURL:(NSString *)serverLoginURL
+                    callbackURI:(NSString *)callbackURI
+              completionHandler:(void (^ __nullable)(BOOL success))completion;
+```
+
+**Code Samples**
+
+```objc
+[MOSimpleWalletSDK requestEOSAuthorization:@"SimpleWallet" serverLoginURL:@"https://demo/api/login.php" callbackURI:@"MeetOneSDKDemo://more.one?action=login" completionHandler:^(BOOL success) {
+        ;
+}];
+```
+
+**res Data**
+* `NSDictionary` Account Info or nil
+
+#### 2.EOS Transfer
+
+**API**
+
+```objc
+/**
+ *  EOS Transfer
+ *
+ *  @param eosTransfer EOS Transfer
+ *  @param callbackURI dapp's callback URI
+ *  @param completion completion block
+ */
++ (void)sendEOSTransferation:(MOEOSTransfer *)eosTransfer
+                 callbackURI:(NSString *)callbackURI
+           completionHandler:(void (^ __nullable)(BOOL success))completion;
+```
+
+**Code Samples**
+
+```objc
+//Create Transfer
+MOEOSTransfer *transfer = [MOEOSTransfer new];
+transfer.to = @"johntrump123";
+transfer.amount = 1;
+transfer.tokenName = @"EOS";
+transfer.tokenContract = @"eosio.token";
+transfer.tokenPrecision = 4;
+transfer.memo = @"Just for Test";
+transfer.orderInfo = @"EOS TO THE MOON !!!";
+    
+//Send
+[MOSimpleWalletSDK sendEOSTransferation:transfer callbackURI:@"MeetOneSDKDemo://more.one?action=transfer" completionHandler:^(BOOL success) {
+        ;
+}];
+```
+
+**res Data**  
+* `NSDictionary` Returned data in chain
+    * `txID`:`NSString`  transaction_id

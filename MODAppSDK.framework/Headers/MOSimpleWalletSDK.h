@@ -13,26 +13,30 @@
 @class MOEOSTransactions;
 @class MOCallbackResp;
 
-typedef void(^MOCompletionBlock)(MOCallbackResp *resp, MODapp *meetone);
+typedef NS_ENUM(NSInteger, MOSimpleWalletCallbackResult) {
+    MOSimpleWalletCallbackResultError = -1,
+    MOSimpleWalletCallbackResultCancel = 0,
+    MOSimpleWalletCallbackResultSuccess = 1,
+    MOSimpleWalletCallbackResultFailed = 2
+};
+typedef void(^MOSimpleWalletCompletionBlock)(MOSimpleWalletCallbackResult result, id res, NSString *callbackURI);
 
-@interface MODAppSDK : NSObject
+@interface MOSimpleWalletSDK : NSObject
 
 #pragma mark - Common
 /**
  *  Register Dapp
  *
  *  @param dapp dapp's information
- *  @param dappScheme dapp's callback scheme
  *  @param redirectURLString dapp's callback redirectURLString
  *
  *  @return succsee
  */
-+ (BOOL)registerWithDApp:(MODapp *)dapp
-              dappScheme:(NSString *)dappScheme
-       redirectURLString:(NSString *)redirectURLString;
++ (BOOL)registerSDKWithDApp:(MODapp *)dapp
+          redirectURLString:(NSString *)redirectURLString;
 
 /**
- *  MEET.ONE Callback Handler
+ *  SimpleWallet Callback Handler
  *
  *  @param resultUrl callback open url
  *  @param completionBlock callback block
@@ -40,47 +44,31 @@ typedef void(^MOCompletionBlock)(MOCallbackResp *resp, MODapp *meetone);
  *  @return Whether sdk can handle
  */
 + (BOOL)handleCallbackWithResult:(NSURL *)resultUrl
-                 completionBlock:(MOCompletionBlock)completionBlock;
+                 completionBlock:(MOSimpleWalletCompletionBlock)completionBlock;
 
 #pragma mark - EOS
 /**
  *  Request EOS Authorization
  *
  *  @param description Reason of Requesting
+ *  @param serverLoginURL dapp's server login API URL
+ *  @param callbackURI dapp's callback URI
  *  @param completion completion block
  */
 + (void)requestEOSAuthorization:(NSString *)description
+                 serverLoginURL:(NSString *)serverLoginURL
+                    callbackURI:(NSString *)callbackURI
               completionHandler:(void (^ __nullable)(BOOL success))completion;
 
 /**
  *  EOS Transfer
  *
  *  @param eosTransfer EOS Transfer
+ *  @param callbackURI dapp's callback URI
  *  @param completion completion block
  */
 + (void)sendEOSTransferation:(MOEOSTransfer *)eosTransfer
+                 callbackURI:(NSString *)callbackURI
            completionHandler:(void (^ __nullable)(BOOL success))completion;
-
-/**
- *  Push EOS Transactions
- *
- *  @param eosActions Standard EOS Actions
- *  @param completion completion block
- */
-+ (void)pushEOSTransactions:(MOEOSTransactions *)eosActions
-          completionHandler:(void (^ __nullable)(BOOL success))completion;
-
-/**
- *  Request EOS Custom Signature
- *
- *  @param accountName request account name
- *  @param description Reason of Requesting
- *  @param customData custom signature data
- *  @param completion completion block
- */
-+ (void)requestEOSCustomSignature:(NSString *)accountName
-                      description:(NSString *)description
-                       customData:(NSString *)customData
-                completionHandler:(void (^ __nullable)(BOOL success))completion;
 
 @end
