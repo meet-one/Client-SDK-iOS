@@ -41,6 +41,7 @@ iOS client SDK for DApps.Support MEET.ONE SDK & SimpleWallet SDK.
     dapp.icon = @"https://static.ethte.com/more/images/bigicon.png";
     dapp.version = @"1.1.0";
     dapp.dappDescription = @"MORE.ONE is the first airdrop “candy” distribution application focused on EOS.";
+    dapp.uuID = @"6e76f5ef-86da-441f-9be8-f7bebef72f9f";
     
     //Register MEET.ONE SDK for your dapp
     [MODAppSDK registerWithDApp:dapp dappScheme:@"MeetOneSDKDemo" redirectURLString:@"https://more.one"];
