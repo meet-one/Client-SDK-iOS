@@ -53,6 +53,15 @@ typedef void(^MOCompletionBlock)(MOCallbackResp *resp, MODapp *meetone);
               completionHandler:(void (^ __nullable)(BOOL success))completion;
 
 /**
+ *  Get EOS Account Info
+ *
+ *  @param description Reason of Requesting
+ *  @param completion completion block
+ */
++ (void)requestEOSAccountInfo:(NSString *)description
+            completionHandler:(void (^ __nullable)(BOOL success))completion;
+
+/**
  *  EOS Transfer
  *
  *  @param eosTransfer EOS Transfer

@@ -134,6 +134,10 @@ iOS client SDK for DApps.Support MEET.ONE SDK & SimpleWallet SDK.
     * `publicKey`: `NSString` account publicKey
     * `isOwner`: `BOOL` account perssion(Owner,Active)
     * `currencyBalance`: `float` account eos balance
+    * `signature`: `String` signature
+    * `uuid`: `String` dapp uuid
+    * `ref`: `String` default is "MEET.ONE"
+    * `timestamp`: `String` sign timestamp
 
 #### 2.EOS Transfer
 
@@ -247,6 +251,37 @@ transactions.transactionsInfo = @"EOS TO THE MOON !!!";
     * `isOwner`: `BOOL` account perssion(Owner,Active)
     * `signature`:`NSString`  signature
 
+
+#### 5.Request EOS Authorization
+
+**API**
+
+```objc
+/**
+ *  Get EOS Account Info
+ *
+ *  @param description Reason of Requesting
+ *  @param completion completion block
+ */
++ (void)requestEOSAccountInfo:(NSString *)description
+            completionHandler:(void (^ __nullable)(BOOL success))completion;
+```
+
+**Code Samples**
+
+```objc
+[MODAppSDK requestEOSAccountInfo:@"EOS TO THE MOON !!!" completionHandler:^(BOOL success) {
+        ;
+}];
+```
+
+**CallbackResp Data**
+* `NSDictionary` Account Info
+    * `account`: `NSString` account name
+    * `publicKey`: `NSString` account publicKey
+    * `isOwner`: `BOOL` account perssion(Owner,Active)
+    * `currencyBalance`: `float` account eos balance
+
     
 ## SimpleWallet SDK Usage
 
@@ -268,7 +303,7 @@ transactions.transactionsInfo = @"EOS TO THE MOON !!!";
     dapp.uuID = @"6e76f5ef-86da-441f-9be8-f7bebef72f9f";
     
     //Register SimpleWallet SDK for your dapp
-    [MOSimpleWalletSDK registerSDKWithDApp:dapp redirectURLString:@"https://more.one"];
+    [MOSimpleWalletSDK registerSDKWithDApp:dapp];
     
     // other code
     

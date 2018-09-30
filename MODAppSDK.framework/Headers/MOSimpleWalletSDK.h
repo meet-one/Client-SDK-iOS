@@ -28,12 +28,10 @@ typedef void(^MOSimpleWalletCompletionBlock)(MOSimpleWalletCallbackResult result
  *  Register Dapp
  *
  *  @param dapp dapp's information
- *  @param redirectURLString dapp's callback redirectURLString
  *
  *  @return succsee
  */
-+ (BOOL)registerSDKWithDApp:(MODapp *)dapp
-          redirectURLString:(NSString *)redirectURLString;
++ (BOOL)registerSDKWithDApp:(MODapp *)dapp;
 
 /**
  *  SimpleWallet Callback Handler
