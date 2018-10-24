@@ -133,7 +133,8 @@ iOS client SDK for DApps.Support MEET.ONE SDK & SimpleWallet SDK.
 * `NSDictionary` Account Info
     * `account`: `NSString` account name
     * `publicKey`: `NSString` account publicKey
-    * `isOwner`: `BOOL` account perssion(Owner,Active)
+    * `isOwner`: `BOOL` account owner perssion
+    * `isActive`: `BOOL` account active perssion
     * `currencyBalance`: `float` account eos balance
     * `signature`: `String` signature
     * `uuid`: `String` dapp uuid
