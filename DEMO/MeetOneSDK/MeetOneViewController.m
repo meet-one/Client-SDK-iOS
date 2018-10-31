@@ -95,7 +95,6 @@
 - (IBAction)pushActions:(id)sender {
     MOEOSTransactions *transactions = [MOEOSTransactions new];
     transactions.from = @"johntrump123";
-    transactions.to = @"wujunchuan12";
     transactions.actions = @[@{@"account":@"eosio.token",@"name":@"transfer",@"authorization":@[@{@"actor":@"johntrump123",@"permission":@"owner"}],@"data":@{@"from":@"johntrump123",@"to":@"wujunchuan12",@"quantity":@"0.0001 EOS",@"memo":@"sdk test"}}];
     transactions.options = @{@"broadcast":@(YES)};
     transactions.transactionsInfo = @"EOS TO THE MOON !!!";

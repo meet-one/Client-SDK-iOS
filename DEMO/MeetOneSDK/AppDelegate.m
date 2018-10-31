@@ -30,7 +30,7 @@
     //Register MEET.ONE SDK for your dapp
     [MODAppSDK registerWithDApp:dapp dappScheme:@"MeetOneSDKDemo" redirectURLString:@"https://more.one"];
     //Register SimpleWallet SDK for your dapp
-    [MOSimpleWalletSDK registerSDKWithDApp:dapp redirectURLString:@"https://more.one"];
+    [MOSimpleWalletSDK registerSDKWithDApp:dapp];
     
     return YES;
 }
