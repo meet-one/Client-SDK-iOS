@@ -32,6 +32,15 @@ typedef void(^MOCompletionBlock)(MOCallbackResp *resp, MODapp *meetone);
        redirectURLString:(NSString *)redirectURLString;
 
 /**
+ *  Set EOS Chain ID
+ *
+ *  @param chainID eos chain id
+ *
+ *  @return succsee
+ */
++ (BOOL)setEOSChainID:(NSString *)chainID;
+
+/**
  *  MEET.ONE Callback Handler
  *
  *  @param resultUrl callback open url

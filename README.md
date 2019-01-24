@@ -104,8 +104,20 @@ iOS client SDK for DApps.Support MEET.ONE SDK & SimpleWallet SDK.
 }
 ```
 
+### Step.3 - Set the Chain id（if not set chain id，default is EOS Mainnet's chain id）
+```objc
+/**
+ *  Set EOS Chain ID
+ *
+ *  @param chainID eos chain id
+ *
+ *  @return succsee
+ */
++ (BOOL)setEOSChainID:(NSString *)chainID;
+```
 
-### Step.3 - Choose the function
+
+### Step.4 - Choose the function
 #### 1.Request EOS Authorization
 
 **API**
