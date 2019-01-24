@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "MODAppSDK"
-  s.version          = "1.3.3"
+  s.version          = "2.0.0"
   s.summary          = 'MEET.ONE iOS client SDK for DApps.'
   s.homepage         = 'https://meet.one'
   s.license          = 'MIT'
