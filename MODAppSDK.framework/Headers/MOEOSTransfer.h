@@ -12,7 +12,7 @@
 
 @property (nonatomic, copy) NSString *from;
 @property (nonatomic, copy) NSString *to;
-@property (nonatomic, assign) float amount;
+@property (nonatomic, copy) NSString *amount;
 @property (nonatomic, copy) NSString *tokenName;            //e.g. EOS
 @property (nonatomic, copy) NSString *tokenContract;        //e.g. eosio.token
 @property (nonatomic, assign) NSInteger tokenPrecision;     //e.g. 4
