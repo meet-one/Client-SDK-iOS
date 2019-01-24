@@ -59,7 +59,7 @@
     MOEOSTransfer *transfer = [MOEOSTransfer new];
     transfer.from = @"johntrump123";
     transfer.to = @"wujunchuan12";
-    transfer.amount = 0.0001;
+    transfer.amount = @"0.0001";
     transfer.tokenName = @"EOS";
     transfer.tokenContract = @"eosio.token";
     transfer.tokenPrecision = 4;
