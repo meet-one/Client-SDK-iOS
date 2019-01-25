@@ -32,15 +32,6 @@ typedef void(^MOCompletionBlock)(MOCallbackResp *resp, MODapp *meetone);
        redirectURLString:(NSString *)redirectURLString;
 
 /**
- *  Set EOS Chain ID
- *
- *  @param chainID eos chain id
- *
- *  @return succsee
- */
-+ (BOOL)setEOSChainID:(NSString *)chainID;
-
-/**
  *  MEET.ONE Callback Handler
  *
  *  @param resultUrl callback open url
@@ -92,11 +83,13 @@ typedef void(^MOCompletionBlock)(MOCallbackResp *resp, MODapp *meetone);
  *  Request EOS Custom Signature
  *
  *  @param accountName request account name
+ *  @param chainId request chain id
  *  @param description Reason of Requesting
  *  @param customData custom signature data
  *  @param completion completion block
  */
 + (void)requestEOSCustomSignature:(NSString *)accountName
+                          chainId:(nullable NSString *)chainId
                       description:(NSString *)description
                        customData:(NSString *)customData
                 completionHandler:(void (^ __nullable)(BOOL success))completion;

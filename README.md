@@ -104,20 +104,7 @@ iOS client SDK for DApps.Support MEET.ONE SDK & SimpleWallet SDK.
 }
 ```
 
-### Step.3 - Set the Chain id（if not set chain id，default is EOS Mainnet's chain id）
-```objc
-/**
- *  Set EOS Chain ID
- *
- *  @param chainID eos chain id
- *
- *  @return succsee
- */
-+ (BOOL)setEOSChainID:(NSString *)chainID;
-```
-
-
-### Step.4 - Choose the function
+### Step.3 - Choose the function
 #### 1.Request EOS Authorization
 
 **API**
@@ -144,6 +131,7 @@ iOS client SDK for DApps.Support MEET.ONE SDK & SimpleWallet SDK.
 **CallbackResp Data**
 * `NSDictionary` Account Info
     * `account`: `NSString` account name
+    * `chainId`: `NSString` chainId
     * `publicKey`: `NSString` account publicKey
     * `isOwner`: `BOOL` account owner perssion
     * `isActive`: `BOOL` account active perssion
@@ -174,6 +162,7 @@ iOS client SDK for DApps.Support MEET.ONE SDK & SimpleWallet SDK.
 //Create Transfer
 MOEOSTransfer *transfer = [MOEOSTransfer new];
 transfer.to = @"johntrump123";
+transfer.toChainId = @"";
 transfer.amount = 1;
 transfer.tokenName = @"EOS";
 transfer.tokenContract = @"eosio.token";
@@ -213,6 +202,7 @@ transfer.orderInfo = @"EOS TO THE MOON !!!";
 //Create Transactions
 MOEOSTransactions *transactions = [MOEOSTransactions new];
 transactions.from = @"johntrump123";
+transactions.chainId = @"";
 transactions.actions = @[@{@"account":@"eosio.token",@"name":@"transfer",@"authorization":@[@{@"actor":@"johntrump123",@"permission":@"owner"}],@"data":@{@"from":@"johntrump123",@"to":@"wujunchuan12",@"quantity":@"0.0001 EOS",@"memo":@"sdk test"}}];
 transactions.options = @{@"broadcast":@(YES)};
 transactions.transactionsInfo = @"EOS TO THE MOON !!!";
@@ -237,11 +227,13 @@ transactions.transactionsInfo = @"EOS TO THE MOON !!!";
  *  Request EOS Custom Signature
  *
  *  @param accountName request account name
+ *  @param chainId request chain id
  *  @param description Reason of Requesting
  *  @param customData custom signature data
  *  @param completion completion block
  */
 + (void)requestEOSCustomSignature:(NSString *)accountName
+                          chainId:(nullable NSString *)chainId
                       description:(NSString *)description
                        customData:(NSString *)customData
                 completionHandler:(void (^ __nullable)(BOOL success))completion;
@@ -252,6 +244,7 @@ transactions.transactionsInfo = @"EOS TO THE MOON !!!";
 ```objc
 //Request EOS Custom Signature
 [MODAppSDK requestEOSCustomSignature:@"johntrump123"
+                             chainId:nil
                          description:@"EOS TO THE MOON !!!"
                           customData:@"for test"
                    completionHandler:^(BOOL success) {
@@ -262,6 +255,7 @@ transactions.transactionsInfo = @"EOS TO THE MOON !!!";
 **CallbackResp Data**  
 * `NSDictionary` Signature data in chain
     * `account`: `NSString` account name
+    * `chainId`: `NSString` chainId
     * `isOwner`: `BOOL` account perssion(Owner,Active)
     * `signature`:`NSString`  signature
 
@@ -292,6 +286,7 @@ transactions.transactionsInfo = @"EOS TO THE MOON !!!";
 **CallbackResp Data**
 * `NSDictionary` Account Info
     * `account`: `NSString` account name
+    * `chainId`: `NSString` chainId
     * `publicKey`: `NSString` account publicKey
     * `isOwner`: `BOOL` account perssion(Owner,Active)
     * `currencyBalance`: `float` account eos balance
