@@ -133,8 +133,7 @@ iOS client SDK for DApps.Support MEET.ONE SDK & SimpleWallet SDK.
     * `account`: `NSString` account name
     * `chainId`: `NSString` chainId
     * `publicKey`: `NSString` account publicKey
-    * `isOwner`: `BOOL` account owner perssion
-    * `isActive`: `BOOL` account active perssion
+    * `permission`: `NSString` account permission
     * `currencyBalance`: `float` account eos balance
     * `signature`: `String` signature
     * `uuid`: `String` dapp uuid
@@ -256,11 +255,11 @@ transactions.transactionsInfo = @"EOS TO THE MOON !!!";
 * `NSDictionary` Signature data in chain
     * `account`: `NSString` account name
     * `chainId`: `NSString` chainId
-    * `isOwner`: `BOOL` account perssion(Owner,Active)
+    * `permission`: `NSString` account permission
     * `signature`:`NSString`  signature
 
 
-#### 5.Request EOS Authorization
+#### 5.Request EOS AccountInfo
 
 **API**
 
@@ -288,7 +287,7 @@ transactions.transactionsInfo = @"EOS TO THE MOON !!!";
     * `account`: `NSString` account name
     * `chainId`: `NSString` chainId
     * `publicKey`: `NSString` account publicKey
-    * `isOwner`: `BOOL` account perssion(Owner,Active)
+    * `permission`: `NSString` account permission
     * `currencyBalance`: `float` account eos balance
 
     
