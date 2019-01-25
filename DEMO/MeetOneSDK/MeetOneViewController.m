@@ -78,7 +78,9 @@
     //Create transfer
     MOEOSTransfer *transfer = [MOEOSTransfer new];
     transfer.from = @"johntrump123";
+    transfer.fromChainId = @"";
     transfer.to = @"wujunchuan12";
+    transfer.toChainId = @"";
     transfer.amount = @"0.0001";
     transfer.tokenName = @"EOS";
     transfer.tokenContract = @"eosio.token";
@@ -95,6 +97,7 @@
 - (IBAction)pushActions:(id)sender {
     MOEOSTransactions *transactions = [MOEOSTransactions new];
     transactions.from = @"johntrump123";
+    transactions.fromChainId = @"";
     transactions.actions = @[@{@"account":@"eosio.token",@"name":@"transfer",@"authorization":@[@{@"actor":@"johntrump123",@"permission":@"owner"}],@"data":@{@"from":@"johntrump123",@"to":@"wujunchuan12",@"quantity":@"0.0001 EOS",@"memo":@"sdk test"}}];
     transactions.options = @{@"broadcast":@(YES)};
     transactions.transactionsInfo = @"EOS TO THE MOON !!!";
@@ -104,7 +107,10 @@
 }
 
 - (IBAction)requestCustomSignature:(id)sender {
-    [MODAppSDK requestEOSCustomSignature:@"johntrump123" description:@"EOS TO THE MOON !!!" customData:@"for test" completionHandler:^(BOOL success) {
+    [MODAppSDK requestEOSCustomSignature:@"johntrump123"
+                                 chainId:nil
+                             description:@"EOS TO THE MOON !!!"
+                              customData:@"for test" completionHandler:^(BOOL success) {
         ;
     }];
 }
