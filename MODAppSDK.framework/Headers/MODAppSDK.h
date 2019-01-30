@@ -16,6 +16,7 @@ FOUNDATION_EXPORT const unsigned char MODAppSDKVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <MODAppSDK/PublicHeader.h>
 
+#import "MODefine.h"
 #import "MODAppSDKImp.h"
 #import "MOSimpleWalletSDK.h"
 #import "MOEOSTransfer.h"
