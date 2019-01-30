@@ -19,6 +19,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
+    kMeetOneScheme = @"meetone://";
     //Create your dapp information
     MODapp *dapp = [MODapp new];
     dapp.name = @"MORE.ONE";
