@@ -74,7 +74,7 @@ iOS client SDK for DApps.Support MEET.ONE SDK & SimpleWallet SDK.
     // other code
     
     //Handle MEET.ONE Callback
-    BOOL meetoneCallback = [MODAppSDK handleCallbackWithResult:url standbyCallback:^(MOCallbackResp *resp, MODapp *meetone) {
+    BOOL meetoneCallback = [MODAppSDK handleCallbackWithResult:url completionBlock:^(MOCallbackResp *resp, MODapp *meetone) {
         NSInteger code = resp.code;
         NSString *message = resp.message;
         MOFunctionType type = resp.type;
