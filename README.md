@@ -160,6 +160,7 @@ iOS client SDK for DApps.Support MEET.ONE SDK & SimpleWallet SDK.
 ```objc
 //Create Transfer
 MOEOSTransfer *transfer = [MOEOSTransfer new];
+transfer.from = @"wujunchuan12";
 transfer.to = @"johntrump123";
 transfer.toChainId = @"";
 transfer.amount = 1;
