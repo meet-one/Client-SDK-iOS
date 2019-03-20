@@ -18,6 +18,9 @@ iOS client SDK for DApps.Support MEET.ONE SDK & SimpleWallet SDK.
 
 ## Installation
 
+### Manual
+1. Add `Manual⁩/MODAppSDK.framework'` to your project's Linked Frameworks and Libraries.
+
 ### CocoaPods
 
 1. Add `pod 'MODAppSDK'` to your Podfile.
