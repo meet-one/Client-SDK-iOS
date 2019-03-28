@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "MODAppSDK"
-  s.version          = "2.0.0"
+  s.version          = "2.1.0"
   s.summary          = 'MEET.ONE iOS client SDK for DApps.'
   s.homepage         = 'https://meet.one'
   s.license          = 'MIT'
@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
   s.source           = { :git => "https://github.com/meet-one/Client-SDK-iOS.git", :tag => s.version.to_s }
 
   s.platform     = :ios
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '9.0'
   # s.osx.deployment_target = '10.7'
   s.requires_arc = true
 
