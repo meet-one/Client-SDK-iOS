@@ -2,7 +2,7 @@
 //  MOEOSRequest.h
 //  MODAppSDK
 //
-//  Created by 傅福斌 on 2018/8/30.
+//  Created by Rick on 2018/8/30.
 //  Copyright © 2018年 MEET.ONE. All rights reserved.
 //
 

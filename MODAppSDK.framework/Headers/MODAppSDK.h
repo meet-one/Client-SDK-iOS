@@ -2,7 +2,7 @@
 //  MODAppSDK.h
 //  MeetOneSDK
 //
-//  Created by 傅福斌 on 2018/8/29.
+//  Created by Rick on 2018/8/29.
 //  Copyright © 2018年 MEET.ONE. All rights reserved.
 //
 
