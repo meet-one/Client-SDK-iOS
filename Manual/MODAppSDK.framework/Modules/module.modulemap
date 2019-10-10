@@ -1,6 +1,0 @@
-framework module MODAppSDK {
-  umbrella header "MODAppSDK.h"
-
-  export *
-  module * { export * }
-}
